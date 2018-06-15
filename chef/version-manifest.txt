@@ -1,0 +1,33 @@
+chef 14.2.0
+
+Component               Installed Version   Version GUID                                                                                                              Overridden From   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+appbundler              master              git:b132bba3f125f6cf498e7578f5fcaf09f678c915                                                                              
+bundler                 14.2.0              
+bzip2                   1.0.6               sha256:a2848f34fcd5d6cf47def00461fcb528a0484d8edef8208d6d2e2909dc61d9cd                                                   
+cacerts                 2018-01-17          sha256:defe310a0184a12e4b1b3d147f1d77395dd7a09e3428373d019bef5d542ceba3                                                   
+chef                    local_source        path:/home/jenkins/workspace/chef-build/architecture/x86_64/platform/el-7/project/chef/role/builder/omnibus/files/../..   master            
+config_guess            master              git:84f04b02a7e2fc8eaa9d52deee5f6d57b06fe447                                                                              
+gem-permissions         0.0.1               
+libarchive              3.3.2               sha256:ed2dbd6954792b2c054ccf8ec4b330a54b85904a80cef477a1c74643ddafa0ce                                                   
+libffi                  3.2.1               md5:83b89587607e3eb65c70d361f13bab43                                                                                      
+liblzma                 5.2.3               sha256:71928b357d0a09a12a4b4c5fafca8c31c19b0e7d3b8ebb19622e96f26dbf28cb                                                   
+libtool                 2.4.2               md5:d2f3b7d4627e69e13514a40e72a24d50                                                                                      2.4               
+libxml2                 2.9.7               sha256:f63c5e7d30362ed28b38bfa1ac6313f9a80230720b7fb6c80575eeab3ff5900c                                                   2.9.8             
+libxslt                 1.1.30              sha256:ba65236116de8326d83378b2bd929879fa185195bc530b9d1aba72107910b6b3                                                   
+libyaml                 0.1.7               sha256:8088e457264a98ba451a90b8661fcb4f9d6f478f7265d48322a196cec2480729                                                   
+makedepend              1.0.5               md5:efb2d7c7e22840947863efaedc175747                                                                                      
+nokogiri                14.2.0              
+ohai                    master              git:90f26b8cf5826f6288a78c3f9a4669e60161e03a                                                                              
+openssl                 1.0.2o              sha256:ec3f5c9714ba0fd45cb4e087301eb1336c317e0d20b575a125050470e8089e4d                                                   
+openssl-customization   14.2.0              
+openssl-fips            2.0.10              sha256:a42ccf5f08a8b510c0c78da1ba889532a0ce24e772b576604faf09b4d6a0f771                                                   
+pkg-config-lite         0.28-1              md5:61f05feb6bab0a6bbfab4b6e3b2f44b6                                                                                      
+preparation             1.0.0               
+ruby                    2.5.1               sha256:dac81822325b79c3ba9532b048c2123357d3310b2b40024202f360251d9829b1                                                   2.1.8             
+rubygems                14.2.0              
+shebang-cleanup         0.0.2               
+util-macros             1.19.0              md5:40e1caa49a71a26e0aa68ddd00203717                                                                                      1.18.0            
+version-manifest        0.0.1               
+xproto                  7.0.28              md5:0b42843b99aee3e4f6a9cc7710143f86                                                                                      7.0.25            
+zlib                    1.2.11              sha256:c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1                                                   

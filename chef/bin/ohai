@@ -1,0 +1,44 @@
+#!/opt/chef/embedded/bin/ruby --disable-gems
+#--APP_BUNDLER_BINSTUB_FORMAT_VERSION=1--
+require "rubygems"
+
+begin
+  # this works around rubygems/rubygems#2196 and can be removed in rubygems > 2.7.6
+  require "rubygems/bundler_version_finder"
+rescue LoadError
+  # probably means rubygems is too old or too new to have this class, and we don't care
+end
+
+# avoid appbundling if we are definitely running within a Bundler bundle.
+# most likely the check for defined?(Bundler) is enough since we don't require
+# bundler above, but just for paranoia's sake also we test to see if Bundler is
+# really doing its thing or not.
+unless defined?(Bundler) && Bundler.instance_variable_defined?("@load")
+  ENV["GEM_HOME"] = ENV["GEM_PATH"] = nil unless ENV["APPBUNDLER_ALLOW_RVM"] == "true"
+  ::Gem.clear_paths
+
+  gem "systemu", "= 2.6.5"
+  gem "ffi-yajl", "= 2.3.1"
+  gem "libyajl2", "= 1.2.0"
+  gem "mixlib-cli", "= 1.7.0"
+  gem "mixlib-config", "= 2.2.6"
+  gem "tomlrb", "= 1.2.6"
+  gem "mixlib-log", "= 2.0.4"
+  gem "mixlib-shellout", "= 2.3.2"
+  gem "plist", "= 3.4.0"
+  gem "ipaddress", "= 0.8.3"
+  gem "wmi-lite", "= 1.0.0"
+  gem "ffi", "= 1.9.25"
+  gem "chef-config", "= 14.1.12"
+  gem "addressable", "= 2.5.2"
+  gem "public_suffix", "= 3.0.2"
+  gem "fuzzyurl", "= 0.9.0"
+  gem "ohai", "= 14.2.0"
+  spec = Gem::Specification.find_by_name("ohai", "= 14.2.0")
+else
+  spec = Gem::Specification.find_by_name("ohai")
+end
+
+bin_file = spec.bin_file("ohai")
+
+Kernel.load(bin_file)

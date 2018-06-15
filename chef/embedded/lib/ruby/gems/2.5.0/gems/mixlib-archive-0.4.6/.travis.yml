@@ -1,0 +1,30 @@
+sudo: false
+language: ruby
+cache: bundler
+
+addons:
+  apt:
+    packages:
+      - libarchive-dev
+
+matrix:
+  include:
+    - rvm: 2.4.4
+    - rvm: 2.5.1
+    - rvm: ruby-head
+  allow_failures:
+    - rvm: ruby-head
+branches:
+  only:
+  - master
+
+bundler_args: --without changelog
+
+before_install:
+  - gem install bundler
+  - bundle --version
+  - gem update --system
+  - gem --version
+
+script:
+  - bundle exec rake ci

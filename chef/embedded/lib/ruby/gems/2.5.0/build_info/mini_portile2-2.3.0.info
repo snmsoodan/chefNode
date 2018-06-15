@@ -1,0 +1,7 @@
+--use-system-libraries
+--with-xml2-lib=/opt/chef/embedded/lib
+--with-xml2-include=/opt/chef/embedded/include/libxml2
+--with-xslt-lib=/opt/chef/embedded/lib
+--with-xslt-include=/opt/chef/embedded/include/libxslt
+--without-iconv
+--with-zlib-dir=/opt/chef/embedded
