@@ -1,3 +1,4 @@
+```
 # chefNode
 User Data
 
@@ -154,3 +155,4 @@ end
 
 metadata.rb
 depends 'java_se', '~> 10.0'
+```
